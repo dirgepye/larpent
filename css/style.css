@@ -1,8 +1,10 @@
 html {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 
-*, *:before, *:after {
+*,
+*:before,
+*:after {
     box-sizing: inherit;
     border-top-left-radius: 2px;
     border-top-right-radius: 2px;
@@ -11,7 +13,17 @@ html {
     margin: 0;
 }
 
+.organisme,
+.contact,
+.home {
+    width: 1030px;
+    padding: 10px;
+}
 
+body {
+    min-height: 100%;
+    position: relative;
+}
 
 .nav {
     display: -webkit-box;
@@ -22,8 +34,6 @@ html {
     background-color: #006699;
     justify-content: center;
     border-bottom: 2px solid #111;
-    
-    
 }
 
 .section {
@@ -32,27 +42,31 @@ html {
     display: -ms-flexbox;
     display: -webkit-flex;
     display: flex;
-    
     justify-content: space-between;
     width: 1030px;
 }
 
 .section > * {
     padding: 10px;
-    
 }
 
 .section ul {
     display: flex;
     align-items: flex-end;
     list-style: none;
-    
+    margin: 0;
 }
+
 .section ul li a {
     color: #ddd;
     padding: 0px 4px;
-    
 }
+
+
+/* NAV END */
+
+
+/* HOME BEGIN */
 
 .wrapper {
     display: -webkit-box;
@@ -61,10 +75,10 @@ html {
     display: -webkit-flex;
     display: flex;
     justify-content: center;
-    
+    min-height: 100vh;
 }
 
-.article {
+.home {
     display: -webkit-box;
     display: -moz-box;
     display: -ms-flexbox;
@@ -72,37 +86,154 @@ html {
     display: flex;
     justify-content: center;
     flex-direction: column;
-    
-    width: 1030px;
-    padding: 10px;
-    
 }
 
-.article__news {
+.home__news {
     display: flex;
     flex-direction: row;
     align-items: flex-start;
-    
     padding: 10px 0px;
     width: 700px;
-    
 }
+
 
 /*@media only screen and (min-width: 401px) {*/
-/*    .article__news {flex-direction: row;*/
+
+
+/*    .home__news {flex-direction: row;*/
+
+
 /*        background-color: red;*/
+
+
 /*    }    */
+
+
 /*}*/
 
-.article__news p {
+.home__news p {
     padding: 0px 10px;
-    
+}
+
+
+/*HOME END */
+
+
+/* CONTACT BEGIN */
+
+.contact {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.contact p {
+    padding: 0px 15px;
+}
+
+
+/*CONTACT END */
+
+
+/* ORGANISME BEGIN */
+
+.organisme {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: column;
+}
+
+.statement {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.statement__details {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: column;
+    width: 300px;
 }
 
 
 
 
+.organisme__team {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-flow: row wrap;
+    justify-content: space-around;
+    
+    
+    
+}
 
+.organisme__team-members {
+        display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-flow: row wrap;
+    justify-content: space-around;
+    
+    
+}
+
+.organisme__member {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: row;
+    
+    margin-bottom: 15px;
+    width: 480px;
+}
+
+.organisme__member-info {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 10px;
+}
+
+.organisme__member-pic {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: column; 
+    
+}
+
+/* ORGANISME END */
+
+/* FOOTER BEGIN */
 
 footer {
     display: -webkit-box;
@@ -112,14 +243,15 @@ footer {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    
-    
+    position: absolute;
+    bottom: 0;
+    width: 100%;
     background-color: #006699;
     border-top: 2px solid #111;
 }
 
 footer > * {
-    padding: 10px;    
+    padding: 10px;
 }
 
 .social {
