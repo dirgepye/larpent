@@ -13,16 +13,19 @@ html {
     margin: 0;
 }
 
+.projets,
 .organisme,
 .contact,
 .home {
     width: 1030px;
     padding: 10px;
+    margin-bottom: 100px;
 }
 
 body {
     min-height: 100%;
     position: relative;
+    margin: 0;
 }
 
 .nav {
@@ -76,6 +79,7 @@ body {
     display: flex;
     justify-content: center;
     min-height: 100vh;
+    
 }
 
 .home {
@@ -128,11 +132,11 @@ body {
     display: -webkit-flex;
     display: flex;
     flex-direction: row;
-    align-items: center;
+    align-items: flex-start;
 }
 
 .contact p {
-    padding: 0px 15px;
+    padding: 60px 15px;
 }
 
 
@@ -233,9 +237,34 @@ body {
 
 /* ORGANISME END */
 
+
+
+
+
+/* PROJETs BEGIN */
+
+.projets__description {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: row; 
+}
+
+.projets__description p {
+    padding-left: 10px;
+}
+
+/* PROJETS END */
+
+
+
+
+
 /* FOOTER BEGIN */
 
-footer {
+.footer {
     display: -webkit-box;
     display: -moz-box;
     display: -ms-flexbox;
@@ -248,9 +277,10 @@ footer {
     width: 100%;
     background-color: #006699;
     border-top: 2px solid #111;
+    padding-top: 10px;
 }
 
-footer > * {
+.footer > * {
     padding: 10px;
 }
 
