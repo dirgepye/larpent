@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -6,10 +6,23 @@
     <title>L'Arpent - Organisme</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="css/style.css">
+    <style type="text/css">
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+        }
+        
+        #map {
+            height: 300px;
+            width: 300px;
+        }
+    </style>
 </head>
 
 <body>
     <!-- NAV BEGIN -->
+
     <div class="nav">
         <div class="section">
 
@@ -18,8 +31,8 @@
 
             <ul>
                 <li><a href="organisme.html">L'Organisme</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">Projets</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="projets.html">Projets</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
 
@@ -29,10 +42,34 @@
     <!-- BODY BEGIN -->
     <div class="wrapper">
         <div class="contact">
+
             <img src="http://placekitten.com/372/166">
             <p>Address 123 Fake Street, H4H 4H4, Quebec Canada
                 <br> 514-999-9999
             </p>
+            <div id="map"></div>
+            <script type="text/javascript">
+                function initMap() {
+                    var myLatLng = {
+                        lat: 45.47470,
+                        lng: -73.58521
+                    };
+
+                    var map = new google.maps.Map(document.getElementById('map'), {
+                        zoom: 15,
+                        scrollwheel: false,
+                        center: myLatLng
+                    });
+
+                    var marker = new google.maps.Marker({
+                        position: myLatLng,
+                        map: map,
+                        title: 'Hello World!'
+                    });
+                }
+            </script>
+            <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBAcqO00llkNaeS5NHRyGg-lf0QrSPnwGs&callback=initMap">
+            </script>
 
         </div>
     </div>
@@ -49,8 +86,8 @@
         </div>
     </div>
 
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script> -->
+
     <script src="script/script.js"></script>
 </body>
 
