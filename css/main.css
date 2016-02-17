@@ -10,8 +10,14 @@ html {
     border-top-right-radius: 2px;
     border-bottom-right-radius: 2px;
     border-bottom-left-radius: 2px;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
     margin: 0;
     padding: 0;
+    
 }
 
 .services,
@@ -99,9 +105,6 @@ body {
     padding: 10px 0px;
     width: 700px;
 }
-
-
-
 
 .home__news p {
     padding: 0px 10px;
@@ -236,6 +239,8 @@ body {
 /* PROJETS END */
 
 /* SERVICES BEGIN */
+
+
 .services__statement {
     margin-bottom: 10px;
 }
