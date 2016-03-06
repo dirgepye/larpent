@@ -4,7 +4,8 @@
 
 @import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,500,600);
 
-/* font-family: 'Source Sans Pro', sans-serif; */
+/* 
+*/
 
 html {
     box-sizing: border-box;
@@ -14,7 +15,7 @@ html {
 *:before,
 *:after {
     box-sizing: inherit;
-    border-radius: 2px;
+    
     margin: 0;
     padding: 0;
 }
@@ -34,11 +35,12 @@ button{
 
 .services,
 .projets,
-
+.head,
 .contact,
 .home {
-    margin: 10px 50px 10px 50px;
+    // margin: 10px 50px 10px 50px;
     margin-bottom: 100px;
+    padding: 0 55px;
 }
 
 body {
@@ -47,18 +49,18 @@ body {
     margin: 0;
 }
 
-.wrapper {
-    min-height: 100vh;
-    display: -webkit-box;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-    flex-direction: column;
+// .wrapper {
+//     min-height: 100vh;
+//     display: -webkit-box;
+//     display: -moz-box;
+//     display: -ms-flexbox;
+//     display: -webkit-flex;
+//     display: flex;
+//     flex-direction: column;
     
-    align-items: flex-start;
-    margin-top: 10px;
-}
+//     align-items: flex-start;
+//     margin-top: 10px;
+// }
 
 
 /* NAV END */
@@ -79,23 +81,25 @@ body {
     display: flex;
     flex-direction: row;
     align-items: flex-start;
-    
-    
 }
 
 
 .home__article {
-    display: flex;
-    flex-direction: column;
+    overflow: hidden;
+    
     border-top: 1px solid #333;
     border-bottom: 4px solid #333;
     margin-top: 35px;
     margin-right: 40px;
     padding: 20px 0px 15px 0px;
+    width: 370px;
+    height: 300px;
     
     p {
-        font-weight: 600;
+        font-weight: 500;
         font-size: 15px;
+        padding: 0 60px 30px 0;
+        
     }
     
     h3 {
@@ -106,9 +110,13 @@ body {
 .article__button {
     border: 1px solid #333;
     background-color: #fff;
-    padding: 3px 15px 3px 65px ;
+    padding: 3px 15px 3px 65px;
+    font-weight: 600;
     display: flex;
     align-self: flex-end;
+    position: relative;
+    bottom: 0;
+    float: right;
 }
 
 /*HOME END */
@@ -240,6 +248,63 @@ body {
 
 /* PROJETs BEGIN */
 
+
+.projets {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.projets-row {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    width: 940px;
+    height: 300px;
+    margin-bottom: 10px;
+    
+    .desc {
+        width: 320px;
+        height: 300px;
+    }
+    
+    .desc--blue {
+        background-color: #0F263B;
+    }
+    
+    .desc--yellow {
+        background-color: #F0AA1F;
+    }
+    
+    .desc--gray {
+        background-color: #8D8F88;
+    }
+    
+    .desc--green {
+        background-color: #2C5234;
+    }
+}
+
+.row--three {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    spacebetweeeeeen
+    
+    .desc {
+        height: 300px;
+        width: 300px;
+    }
+}
+
 .projets__description {
     display: -webkit-box;
     display: -moz-box;
@@ -290,19 +355,26 @@ body {
     display: -ms-flexbox;
     display: -webkit-flex;
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    position: absolute;
+    position: relative;
     bottom: 0;
+    height: 50vh;
     width: 100%;
-    background-color: #006699;
+    background-color: #292929;
     border-top: 2px solid #111;
     padding-top: 10px;
+    font-family: 'Source Sans Pro', sans-serif;
+    
+    color: #f1f1f1;
+    
+    h1 {
+        color: #f1f1f1;
+        font-size: 50px;
+        font-family: 'Source Serif Pro', serif;
+        border-bottom: 4px solid #f1f1f1; 
+    }
 }
 
-.footer > * {
-    padding: 10px;
-}
+
 
 .social {
     display: flex;
