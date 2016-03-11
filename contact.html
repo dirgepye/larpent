@@ -4,8 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <title>L'Arpent - Organisme</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous"> -->
     <link rel="stylesheet" type="text/css" href="css/main.css">
+    
     <style type="text/css">
         html,
         body {
@@ -20,61 +21,72 @@
     </style>
 </head>
 
-<body>
+<body class="contact--body">
     <!-- NAV BEGIN -->
 
-    <div class="head">
-        <a href="#" class="lang">EN</a>
-        <div class="nav-bar">
-            <h1><a href="index.html">Arpent</a></h1>
-            <ul>
-                <li><a href="organisme.html">L'Organisme</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="projets.html">Projets</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </div>
-        <div class="head__description">
-            <p>Actualisation responsable,
-                <br> perenne et novatrice
-                <br> du territoire</p>
-        </div>
+    <a href="#" class="lang">EN</a>
+    <div class="nav-bar">
+        <h1><a href="index.html">Arpent</a></h1>
+        <ul>
+            <li><a href="organisme.html">L'Organisme</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="projets.html">Projets</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
     </div>
+
     <!-- NAV END -->
     <!-- BODY BEGIN -->
-    <div class="wrapper">
-        <div class="contact">
 
-            <img src="http://placekitten.com/372/166">
-            <p>Address 123 Fake Street, H4H 4H4, Quebec Canada
-                <br> 514-999-9999
-            </p>
-            <div id="map"></div>
-            <script type="text/javascript">
-                function initMap() {
-                    var myLatLng = {
-                        lat: 45.47470,
-                        lng: -73.58521
-                    };
+    <div class="contact">
+        <h1 class="page-title">Contact</h1>
+        <div class="contact__content">
+            <ul class="contact__emails">
+                <li><a href="#"><strong>info@larpent.ca</strong></a></li>
+                <li><a href="#">sam@larpent.ca,</a></li>
+                <li><a href="#">eudes@larpent.ca, </a></li>
+                <li><a href="#">charlotte@larpent.ca,</a></li>
+                <li><a href="#">justin@larpent.ca, </a></li>
+                <li><a href="#">marie-eve@larpent.ca, </a></li>
+                <li><a href="#">timothée@larpent.ca</a></li>
+            </ul>
+            <div class="contact__address">
+                <div>
+                    <h3>adresse</h3> 1234 rue de cassegrain
+                    <br> Montreal, Qc.
+                    <br>
+                    <br>
+                    <h3>telephone</h3> 514 345 6345
+                </div>
 
-                    var map = new google.maps.Map(document.getElementById('map'), {
-                        zoom: 15,
-                        scrollwheel: false,
-                        center: myLatLng
-                    });
 
-                    var marker = new google.maps.Marker({
-                        position: myLatLng,
-                        map: map,
-                        title: 'Hello World!'
-                    });
-                }
-            </script>
-            <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBAcqO00llkNaeS5NHRyGg-lf0QrSPnwGs&callback=initMap">
-            </script>
+                <div id="map"></div>
+                <script type="text/javascript">
+                    function initMap() {
+                        var myLatLng = {
+                            lat: 45.47470,
+                            lng: -73.58521
+                        };
 
+                        var map = new google.maps.Map(document.getElementById('map'), {
+                            zoom: 15,
+                            scrollwheel: false,
+                            center: myLatLng
+                        });
+
+                        var marker = new google.maps.Marker({
+                            position: myLatLng,
+                            map: map,
+                            title: 'Hello World!'
+                        });
+                    }
+                </script>
+                <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBAcqO00llkNaeS5NHRyGg-lf0QrSPnwGs&callback=initMap">
+                </script>
+            </div>
         </div>
     </div>
+
     <!-- BODY END -->
 
     <!-- FOOTER BEGIN -->
@@ -89,8 +101,10 @@
     </div>
 
     <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script> -->
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
     <script src="script/script.js"></script>
+    <script src="style.js"></script>
+    
 </body>
 
 </html>

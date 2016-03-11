@@ -1,0 +1,99 @@
+@import url(https://fonts.googleapis.com/css?family=Source+Serif+Pro:600);
+
+/* font-family: 'Source Serif Pro', serif; */
+
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,500,600);
+
+/* font-family: 'Source Sans Pro', sans-serif;
+*/
+
+
+
+
+@mixin flex {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+}
+
+
+$blue: #0F263B;
+$yellow: #F0AA1F;
+$gray: #8D8F88;
+$green: #2C5234;
+
+
+.projets {
+    @include flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.projets--row {
+    @include flex;
+    width: 1020px;
+    height: 300px;
+    margin-bottom: 20px;
+    
+    .desc {
+        width: 320px;
+        height: 300px;
+        color: #f1f1f1;
+        padding: 35px 40px 35px 16px;
+        
+        > * {
+            padding-bottom: 5px;
+        }
+        
+        button {
+            background: none;
+            border: 1px solid #f1f1f1;
+            padding: 2px 15px;
+            margin-top: 10px;
+            font-size: 12px;
+            transition: background-color 0.5s;
+            -webkit-transition: background-color 0.3s;
+            color: #f1f1f1;
+        }
+    
+        button:hover {
+            background-color: rgba(255,255,255,0.4);
+        }
+    }
+    
+    
+    
+    .desc--blue {
+        background-color: $blue;
+        background-image: url("blue-background.svg");
+    }
+    
+    .desc--yellow {
+        background-color: $yellow;
+    }
+    
+    .desc--gray {
+        background-color: $gray;
+    }
+    
+    .desc--green {
+        background-color: $green;
+        background-image: url("green-background.svg");
+    }
+}
+
+
+
+
+.projets__description {
+    @include flex;
+    flex-direction: row;
+    
+    p {
+    padding-left: 10px;
+    }
+}

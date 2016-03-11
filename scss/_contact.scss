@@ -1,0 +1,70 @@
+
+
+@import url(https://fonts.googleapis.com/css?family=Source+Serif+Pro:600);
+
+/* font-family: 'Source Serif Pro', serif; */
+
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,500,600);
+
+/* font-family: 'Source Sans Pro', sans-serif;
+*/
+
+
+
+
+@mixin flex {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+}
+
+
+$blue: #0F263B;
+$yellow: #F0AA1F;
+$gray: #8D8F88;
+$green: #2C5234;
+
+.contact {
+    @include flex;
+    flex-direction: column;
+    align-items: center;
+    color: #f1f1f1;
+    font-weight: 200;
+    
+    h3 {
+        color: #f1f1f1;
+        font-weight: 500;
+    }
+    
+    
+}
+
+.contact__emails {
+    
+    
+    li a { 
+        color: #f1f1f1;
+        font-size: 35px;
+    }
+}
+
+.contact__content {
+    @include flex;
+    flex-direction: row;
+    width: 1020px;
+    justify-content: space-between;
+}
+
+.contact__address {
+    @include flex;
+    flex-direction: row;
+}
+.contact--body {
+    background-color: $gray;
+}
+
+#map {
+    margin-left: 80px;
+}

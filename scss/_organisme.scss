@@ -1,0 +1,91 @@
+@import url(https://fonts.googleapis.com/css?family=Source+Serif+Pro:600);
+
+/* font-family: 'Source Serif Pro', serif; */
+
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,500,600);
+
+/* font-family: 'Source Sans Pro', sans-serif;
+*/
+
+
+
+
+@mixin flex {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+}
+
+
+$blue: #0F263B;
+$yellow: #F0AA1F;
+$gray: #8D8F88;
+$green: #2C5234;
+
+
+.organisme {
+    @include flex;
+    flex-direction: column;
+    
+
+}
+
+.mission {
+    min-height: 100vh;
+    background-color: #8e8f89;
+        
+    h1 {
+        color: blue;
+        margin: 0;
+    }
+}
+
+.approche {
+    background-color: blue;
+}
+
+.statement {
+    @include flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.statement__details {
+    @include flex;
+    flex-direction: column;
+    width: 300px;
+}
+
+.organisme__team {
+    @include flex;
+    -webkit-flex-flow: row wrap;
+    justify-content: space-around;
+}
+
+.organisme__team-members {
+    @include flex;
+    -webkit-flex-flow: row wrap;
+    justify-content: space-around;
+}
+
+.organisme__member {
+    @include flex;
+    flex-direction: row;
+    margin-bottom: 15px;
+    width: 480px;
+}
+
+.organisme__member-info {
+    @include flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 10px;
+}
+
+.organisme__member-pic {
+    @include flex;
+    flex-direction: column;
+}
+
