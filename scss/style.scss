@@ -28,6 +28,7 @@ $blue: #0F263B;
 $yellow: #F0AA1F;
 $gray: #8D8F88;
 $green: #2C5234;
+$text-gray: #8D8F88;
 
 
 .page-title {
@@ -35,6 +36,7 @@ $green: #2C5234;
     font-weight: 300;
     font-size: 20px;
     color: #8D8F88;
+    text-align: center;
 }
 
 .desc--blue {
@@ -55,10 +57,25 @@ $green: #2C5234;
     
 }
 
-        
+button:focus {
+    outline: none;
+}        
         
 html {
     box-sizing: border-box;
+}
+
+.lang {
+    width: 100%;
+    margin-top: 10px;
+    padding: 0px 20px;
+    text-align: right;
+    
+    @media screen and (min-width: 401px) {
+        width: 1020px;
+        margin: auto;
+        padding: 0;
+    }
 }
 
 *,
@@ -90,32 +107,34 @@ button{
 .contact,
 .home {
     @include flex;
+    -webkit-flex-direction: column;
     flex-direction: column;
+    -webkit-flex-align-items: center;
     align-items: center;
-    justify-content: center;
-    align-cotnent: center;
-    width: 1020px;
-    margin: auto;
+    width: 100%;
     
-    
-    //margin: 10px 50px 10px 50px;
-    //margin-bottom: 100px;
-    //padding: 0 55px;
+    @media screen and (min-width: 401px) {
+        @include flex;
+        //flex-direction: column;
+        -webkit-flex-direction: column;
+        width: 1020px;
+        margin: auto;
+    }
+
 }
 
 body {
     height: 100%;
-    position: relative;
+    //position: relative;
     margin: 0;
+    overflow-x: hidden;
 }
 
 a {
     text-decoration: none;
 }
 
-li {
-    list-style: none;
-}
+
 
 // .wrapper {
 //     min-height: 100vh;
@@ -197,7 +216,11 @@ li {
     padding-top: 10px;
     font-family: 'Source Sans Pro', sans-serif;
     color: #1D1D1B;
-
+    width: 100%;
+    
+    @media screen and (min-width: 401px) {
+        width: 1020px;
+    }
     
     h1 {
         color: #f1f1f1;
@@ -261,6 +284,8 @@ html,
 body {
     margin: 0;
     padding: 0;
+    width: 100%;
+    overflow: hidden;
 }
 
 #map {
@@ -286,8 +311,6 @@ body {
 
 .head a {
     color: #fff;
-    
-    
 }
 
 .head__description {
@@ -309,14 +332,31 @@ body {
     bottom: 15px;
 }
 
+.nav-contain {
+    @include flex;
+    -webkit-flex-direction: row;
+    flex-direction: row;
+}
+
+
+
 .nav-bar {
     @include flex;
     flex-direction: row;
-    align-item: center;
+    align-item: baseline;
     justify-content: space-between;
-    width: 1020px;
     color: #8D8F88;
-    margin: auto;
+    padding: 20px;
+
+    
+    @media screen and (min-width: 401px) {
+        width: 1020px;
+        margin: auto;    
+        padding: 0;
+        
+    }
+
+    
     
     h1 {
     margin: 0;
@@ -338,17 +378,82 @@ body {
     }
     
     ul {
-    display: flex;
+    @include flex;
+    align-items: center;
+    justify-content: space-between;
     list-style: none;
     margin: 0;
+    
+    position: relative;
+    float: left; 
+    //visibility: hidden;
+    //right: -2240px;
+    
+    @media screen and (min-width: 401px) {
+        //visibility: visible;
+        float: none;
+        background-color: white;
+        position: relative;
+        right: 0;
+        width: 480px;
     }
+    }
+    
     ul li a {
     color: #666;
-    padding: 0px 25px;
+    //padding: 0px 25px;
     text-transform: uppercase;
     letter-spacing: 1px;
     font-size: 15px;
-
+    transition: font-weight 0.3s;
+    -webkit-font-smoothing: antialiased
+    }
+    
+    ul li a:hover {
+        font-weight: 600;
     }
 }
+
+
+
+#hamburger {
+    @include flex;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    -webkit-flex-justify-content: space-between;
+    justify-content: space-between;
+
+    
+    height: 35px;
+    width: 45px;
+    padding: 3px 4px 3px;
+    position: relative;
+    visibility: visible;
+    //margin: auto;
+    //right: -145px;
+    
+    @media screen and (min-width: 401px) {
+        //visibility: hidden;
+        margin: 0;
+        padding: 0;
+    } 
+    
+}    
+ 
+#hamburger div {
+    background-color: #8d8f88;
+    height: 5px;
+    //margin-top: 5px;
+    width: 90%;
+    margin-left: auto;
+    
+    
+    p {
+        width: 100%;
+        padding-left: 100%;
+        padding-right: 100%;
+    }
+    
+}
+
 
