@@ -9,9 +9,6 @@
 /* font-family: 'Source Sans Pro', sans-serif;
 */
 
-
-
-
 @mixin flex {
     display: -webkit-box;
     display: -moz-box;
@@ -29,7 +26,9 @@ $green: #2C5234;
 .contact {
     @include flex;
     flex-direction: column;
+    webkit-flex-direction: column;
     align-items: center;
+    webkit-align-items: center;
     color: #f1f1f1;
     font-weight: 200;
     
@@ -37,34 +36,59 @@ $green: #2C5234;
         color: #f1f1f1;
         font-weight: 500;
     }
-    
-    
 }
 
 .contact__emails {
-    
-    
     li a { 
         color: #f1f1f1;
+        font-size: 31px;
+        
+        @media screen and (min-width: 401px) {
         font-size: 35px;
+        }
     }
 }
 
 .contact__content {
     @include flex;
-    flex-direction: row;
-    width: 1020px;
+    webkit-flex-direction: column;
+    flex-direction: column;
     justify-content: space-between;
+    webkit-flex-justify-content: space-between;
+    width: 100%;
+    padding: 20px;
+    
+    @media screen and (min-width: 401px) {
+        flex-direction: row;
+        webkit-flex-direction: row;
+        width: 1020px;
+        padding: 0;
+    }
 }
 
 .contact__address {
     @include flex;
-    flex-direction: row;
+    flex-direction: column;
+    webkit-flex-direction: column;
+    margin: 100px 0 0 0;
+    
+    @media screen and (min-width: 401px) {
+        flex-direction: row;
+        webkit-flex-direction: row;
+        margin: 0;
+        width: 53%;
+    }
 }
+
 .contact--body {
-    background-color: $gray;
+    background-color: #8D8F88;
+    background-image: url("gray-background.svg");
+    background-position: -37px -44px;
 }
 
 #map {
-    margin-left: 80px;
+    margin: 50px 0 0 0;
+    @media screen and (min-width: 401px) {
+        margin: 0 0 0 80px;
+    }
 }

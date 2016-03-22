@@ -1,44 +1,41 @@
 $(document).ready(function() {
-    // run test on initial page load
+
     checkSize();
-
-    // run test on resize of the window
-    $(window).resize(checkSize);
-});
-
-//Function to the css rule
-function checkSize(){
-    if ($(".nav-bar").find('ul').css("float") == "left" ) {
-        $(".nav-bar").find('ul').empty();
-        $(".nav-bar").find('ul').html('<div id="hamburger"><div><p>&nbsp</p></div><div><p>&nbsp</p></div><div><p>&nbsp</p></div></div>');
+    //$(window).resize(checkSize);
+    function checkSize() {
+        if ($(".nav-bar").find('ul').css("visibility") == "hidden") {
+            console.log("here");
+            $(".nav-bar").find('ul').empty();
+            $(".nav-bar").find('ul').html('<div id="hamburger"><div><p>&nbsp</p></div><div><p>&nbsp</p></div><div><p>&nbsp</p></div></div>');
+        }
     }
-}
+
+    //NAV BAR ANIMATION ///////
+    
+    $('#hamburger').click(function() {
+        if ($('.dropdown-menu').css("left") == '-1500px') {
+            $('.dropdown-menu').animate({left: '0px'}, 400, 'swing');
+        }
+        else {
+            $('.dropdown-menu').animate({left: '-1500px'}, 700, 'swing');
+        }
+        });
+    });
 
 
-// $(document).ready(function() {
-//   console.log('yay')
-   
-//     $(window).resize(function() {
-//         if ($(window).width() <= 401) {
-//             console.log("gags")
-//             $('.nav-bar').find('ul').empty();
-//             $('.nav-bar').find('ul').html("<div id='hamburger'><div><p>&nbsp</p></div><div><p>&nbsp</p></div><div><p>&nbsp</p></div></div>")
-            
-//         }
-//     }); 
-// });
+//MAP  ////////////
 
 (function(window, google) {
-    
+
     //map options
     var options = {
-        center: {
-            lat: '37',
-            lng: '-122',
+            center: {
+                lat: '37',
+                lng: '-122',
+            },
+            zoom: 10
         },
-        zoom: 10
-    },
-    element = document.getElementById('map-canvas'),
-    //map istelf
-    map = new google.maps.Map(element, options)
+        element = document.getElementById('map-canvas'),
+        //map istelf
+        map = new google.maps.Map(element, options);
 }(window, window.google));

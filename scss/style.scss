@@ -73,10 +73,22 @@ html {
     
     @media screen and (min-width: 401px) {
         width: 1020px;
-        margin: auto;
+        margin-left: auto;
+        margin-right: auto;
         padding: 0;
     }
+    
+    a {
+        color: #8D8F88;
+        margin-right: 13px;
+        
+        @media screen and (min-width: 401px) {
+            margin: 0;
+        }
+    }
 }
+
+
 
 *,
 *:before,
@@ -85,6 +97,7 @@ html {
     font-family: 'Source Sans Pro', sans-serif;
     margin: 0;
     padding: 0;
+    list-style: none;
 }
 
 h2,
@@ -285,13 +298,13 @@ body {
     margin: 0;
     padding: 0;
     width: 100%;
-    overflow: hidden;
+    //overflow: hidden;
 }
 
-#map {
-    height: 300px;
-    width: 300px;
-}
+// #map {
+//     height: 300px;
+//     width: 100%;
+// }
 
 // .head {
 //     @include flex;
@@ -332,13 +345,6 @@ body {
     bottom: 15px;
 }
 
-.nav-contain {
-    @include flex;
-    -webkit-flex-direction: row;
-    flex-direction: row;
-}
-
-
 
 .nav-bar {
     @include flex;
@@ -346,7 +352,7 @@ body {
     align-item: baseline;
     justify-content: space-between;
     color: #8D8F88;
-    padding: 20px;
+    padding: 7px 20px;
 
     
     @media screen and (min-width: 401px) {
@@ -383,17 +389,13 @@ body {
     justify-content: space-between;
     list-style: none;
     margin: 0;
-    
-    position: relative;
     float: left; 
-    //visibility: hidden;
+    visibility: hidden;
     //right: -2240px;
     
-    @media screen and (min-width: 401px) {
-        //visibility: visible;
+    @media screen and (min-width: 600px) {
+        visibility: visible;
         float: none;
-        background-color: white;
-        position: relative;
         right: 0;
         width: 480px;
     }
@@ -402,6 +404,7 @@ body {
     ul li a {
     color: #666;
     //padding: 0px 25px;
+    font-weight: 400;
     text-transform: uppercase;
     letter-spacing: 1px;
     font-size: 15px;
@@ -446,6 +449,7 @@ body {
     //margin-top: 5px;
     width: 90%;
     margin-left: auto;
+    position: relative;
     
     
     p {
@@ -456,4 +460,36 @@ body {
     
 }
 
+
+.dropdown-menu {
+    width: 100vw;
+    height: 90vh;
+    background-color: white;
+    position: absolute;
+    top: 100px;
+    left: -1500px;
+    z-index: 1000;
+    
+    ul {
+        height: 100%;
+    }
+    
+    li {
+        @include flex;
+        align-items: center;
+        justify-content: center;
+        border-bottom: 1px solid $text-gray;
+        height: 17%;    
+        width: 100%;
+    }
+    
+    li a {
+        margin: auto;
+        text-transform: uppercase;
+        font-weight: 400;
+        color: #444;
+        font-size: 22px;
+        letter-spacing: 2px;
+    }
+}
 

@@ -18,7 +18,9 @@
   display: -webkit-flex;
   display: flex;
   flex-direction: column;
+  webkit-flex-direction: column;
   align-items: center;
+  webkit-align-items: center;
   color: #f1f1f1;
   font-weight: 200; }
   .contact h3 {
@@ -27,7 +29,10 @@
 
 .contact__emails li a {
   color: #f1f1f1;
-  font-size: 35px; }
+  font-size: 31px; }
+  @media screen and (min-width: 401px) {
+    .contact__emails li a {
+      font-size: 35px; } }
 
 .contact__content {
   display: -webkit-box;
@@ -35,9 +40,18 @@
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
-  flex-direction: row;
-  width: 1020px;
-  justify-content: space-between; }
+  webkit-flex-direction: column;
+  flex-direction: column;
+  justify-content: space-between;
+  webkit-flex-justify-content: space-between;
+  width: 100%;
+  padding: 20px; }
+  @media screen and (min-width: 401px) {
+    .contact__content {
+      flex-direction: row;
+      webkit-flex-direction: row;
+      width: 1020px;
+      padding: 0; } }
 
 .contact__address {
   display: -webkit-box;
@@ -45,13 +59,26 @@
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
-  flex-direction: row; }
+  flex-direction: column;
+  webkit-flex-direction: column;
+  margin: 100px 0 0 0; }
+  @media screen and (min-width: 401px) {
+    .contact__address {
+      flex-direction: row;
+      webkit-flex-direction: row;
+      margin: 0;
+      width: 53%; } }
 
 .contact--body {
-  background-color: #8D8F88; }
+  background-color: #8D8F88;
+  background-image: url("gray-background.svg");
+  background-position: -37px -44px; }
 
 #map {
-  margin-left: 80px; }
+  margin: 50px 0 0 0; }
+  @media screen and (min-width: 401px) {
+    #map {
+      margin: 0 0 0 80px; } }
 
 /* font-family: 'Source Serif Pro', serif; */
 /* font-family: 'Source Sans Pro', sans-serif;
@@ -320,8 +347,15 @@ html {
   @media screen and (min-width: 401px) {
     .lang {
       width: 1020px;
-      margin: auto;
+      margin-left: auto;
+      margin-right: auto;
       padding: 0; } }
+  .lang a {
+    color: #8D8F88;
+    margin-right: 13px; }
+    @media screen and (min-width: 401px) {
+      .lang a {
+        margin: 0; } }
 
 *,
 *:before,
@@ -329,7 +363,8 @@ html {
   box-sizing: inherit;
   font-family: 'Source Sans Pro', sans-serif;
   margin: 0;
-  padding: 0; }
+  padding: 0;
+  list-style: none; }
 
 h2,
 h3,
@@ -503,12 +538,7 @@ html,
 body {
   margin: 0;
   padding: 0;
-  width: 100%;
-  overflow: hidden; }
-
-#map {
-  height: 300px;
-  width: 300px; }
+  width: 100%; }
 
 .head a {
   color: #fff; }
@@ -533,15 +563,6 @@ body {
   position: relative;
   bottom: 15px; }
 
-.nav-contain {
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-flex-direction: row;
-  flex-direction: row; }
-
 .nav-bar {
   display: -webkit-box;
   display: -moz-box;
@@ -552,7 +573,7 @@ body {
   align-item: baseline;
   justify-content: space-between;
   color: #8D8F88;
-  padding: 20px; }
+  padding: 7px 20px; }
   @media screen and (min-width: 401px) {
     .nav-bar {
       width: 1020px;
@@ -581,17 +602,17 @@ body {
     justify-content: space-between;
     list-style: none;
     margin: 0;
-    position: relative;
-    float: left; }
-    @media screen and (min-width: 401px) {
+    float: left;
+    visibility: hidden; }
+    @media screen and (min-width: 600px) {
       .nav-bar ul {
+        visibility: visible;
         float: none;
-        background-color: white;
-        position: relative;
         right: 0;
         width: 480px; } }
   .nav-bar ul li a {
     color: #666;
+    font-weight: 400;
     text-transform: uppercase;
     letter-spacing: 1px;
     font-size: 15px;
@@ -624,10 +645,40 @@ body {
   background-color: #8d8f88;
   height: 5px;
   width: 90%;
-  margin-left: auto; }
+  margin-left: auto;
+  position: relative; }
   #hamburger div p {
     width: 100%;
     padding-left: 100%;
     padding-right: 100%; }
+
+.dropdown-menu {
+  width: 100vw;
+  height: 90vh;
+  background-color: white;
+  position: absolute;
+  top: 100px;
+  left: -1500px;
+  z-index: 1000; }
+  .dropdown-menu ul {
+    height: 100%; }
+  .dropdown-menu li {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid #8D8F88;
+    height: 17%;
+    width: 100%; }
+  .dropdown-menu li a {
+    margin: auto;
+    text-transform: uppercase;
+    font-weight: 400;
+    color: #444;
+    font-size: 22px;
+    letter-spacing: 2px; }
 
 /*# sourceMappingURL=main.css.map */
