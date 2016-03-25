@@ -23,5 +23,8 @@
   "homepage": "https://github.com/dirgepye/larpent#readme",
   "devDependencies": {
     "grunt": "^0.4.5"
+  },
+  "dependencies": {
+    "jquery": "^2.2.2"
   }
 }
