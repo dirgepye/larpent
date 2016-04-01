@@ -71,6 +71,7 @@
 
 .contact--body {
   background-color: #8D8F88;
+  background-color: blue;
   background-image: url("gray-contact-bg.svg");
   background-position: -37px -44px; }
 
@@ -331,20 +332,11 @@
 /* font-family: 'Source Serif Pro', serif; */
 /* font-family: 'Source Sans Pro', sans-serif;
 */
-*,
-*:before,
-*:after {
-  box-sizing: inherit;
-  font-family: 'Source Sans Pro', sans-serif;
-  margin: 0;
-  padding: 0;
-  list-style: none; }
-
 .page-title {
   margin: 80px 0;
   font-weight: 300;
   font-size: 20px;
-  color: #666;
+  color: #8D8F88;
   text-align: center; }
 
 .desc--blue {
@@ -397,6 +389,15 @@ html {
     @media screen and (min-width: 401px) {
       .lang a {
         margin: 0; } }
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+  font-family: 'Source Sans Pro', sans-serif;
+  margin: 0;
+  padding: 0;
+  list-style: none; }
 
 h2,
 h3,
@@ -593,10 +594,6 @@ body {
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
-  flex-direction: column;
-  webkit-flex-direction: column;
-  justify-content: space-around;
-  height: 100%;
   font-size: 45px;
   color: #fff;
   margin: auto;
@@ -732,8 +729,4 @@ body {
     font-size: 22px;
     letter-spacing: 2px; }
 
-.navbar-fixed {
-  position: fixed;
-  background-color: orange; }
-
-/*# sourceMappingURL=main.css.map */
+/*# sourceMappingURL=style.scss.map */
