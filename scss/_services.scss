@@ -68,9 +68,6 @@ $text-gray: #8D8F88;
         font-size: 8px;
         padding: 30px 25px;
         
-        
-        
-        
         @media screen and (min-width: 401px) {
         width: 550px;
         height: 100%;
@@ -83,7 +80,7 @@ $text-gray: #8D8F88;
         
         p {
         width: 100%;
-        font-size: 50px;
+        font-size: 18px;
         
         @media screen and (min-width: 401px) { }
         }
@@ -140,3 +137,26 @@ $text-gray: #8D8F88;
     background-position-y: -411px;
     background-size: 132%;
 }
+
+    .mission__desc {
+        width: 100%;
+        padding-right: 10%;
+        font-size: 20px;
+        padding: 30px 25px;
+        line-height: 1.2;
+        
+        @media screen and (min-width: 401px) {
+        width: 720px;
+        height: 100%;
+        //padding: 30px 25px;
+        font-size: 20px;
+        line-height: 1.2;
+        padding: 20px 25px 30px 70px;
+        }
+    }
+    
+    .equipe {
+        color: $text-gray;
+        height: 100%;
+    }
+    

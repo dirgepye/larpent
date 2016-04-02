@@ -89,3 +89,51 @@ $green: #2C5234;
     flex-direction: column;
 }
 
+
+
+
+
+
+
+
+.equipe__membre {
+    @include flex;
+    flex-direction: row;
+    webkit-flex-direction: row;
+    justify-content: space-between;
+}
+
+.membre__description {
+    width: 360px;
+    height: 500px;
+    background-color: black;
+    
+}
+
+.membre__liste {
+    width: 720px;
+    margin: 0 20px;
+    @include flex;
+    flex-direction: row;
+    webkit-flex-direction: row;
+    flex-wrap: wrap;
+    webkit-flex-wrap: wrap;
+    justify-content: space-around;
+    
+}
+
+.membre {
+    @include flex;
+    flex-direction: column;
+    webkit-flex-direction: column;
+    width: 250px;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.desc-container {
+    width: 360px;
+    height: 500px;
+    margin: 0;
+}
+

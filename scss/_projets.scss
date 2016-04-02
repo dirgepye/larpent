@@ -37,8 +37,8 @@ $green: #2C5234;
     @include flex;
     flex-direction: column-reverse;
     -webkit-flex-direction: column-reverse;
-    width: 100;
-    height: 532px;
+    width: 100%;
+    height: 100%;
     overflow: hidden;
     margin-bottom: 20px;
     
@@ -78,26 +78,6 @@ $green: #2C5234;
         button:hover {
             background-color: rgba(255,255,255,0.4);
         }
-    }
-    
-    
-    
-    .desc--blue {
-        background-color: $blue;
-        background-image: url("blue-background.svg");
-    }
-    
-    .desc--yellow {
-        background-color: $yellow;
-    }
-    
-    .desc--gray {
-        background-color: $gray;
-    }
-    
-    .desc--green {
-        background-color: $green;
-        background-image: url("green-background.svg");
     }
 }
 
