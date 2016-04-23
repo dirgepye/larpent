@@ -344,7 +344,24 @@
   display: flex;
   flex-direction: row;
   webkit-flex-direction: row;
-  justify-content: space-between; }
+  justify-content: space-between;
+  margin-top: 60px;
+  color: #8D8F88; }
+  .equipe__membre img {
+    margin-bottom: 20px; }
+  .equipe__membre h1 {
+    font-weight: 600;
+    font-size: 18px; }
+  .equipe__membre h3 {
+    font-weight: 400;
+    font-size: 16px; }
+  .equipe__membre .membre__about {
+    font-weight: 300;
+    color: black;
+    margin-top: 20px; }
+    .equipe__membre .membre__about a {
+      font-weight: 300;
+      color: black; }
 
 .membre__description {
   width: 360px;
@@ -382,6 +399,202 @@
   height: 500px;
   margin: 0; }
 
+.organisme__row {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  -webkit-flex-direction: column;
+  width: 100%;
+  color: white; }
+  @media screen and (min-width: 401px) {
+    .organisme__row {
+      display: -webkit-box;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+      padding-bottom: 60px; } }
+  .organisme__row h2 {
+    width: 210px;
+    font-size: 17pt;
+    font-weight: 300;
+    margin: 0;
+    padding: 30px 25px; }
+  .organisme__row .organisme__desc {
+    width: 100%;
+    padding-right: 10%;
+    font-size: 8px;
+    padding: 30px 0px; }
+    @media screen and (min-width: 401px) {
+      .organisme__row .organisme__desc {
+        width: 620px;
+        height: 100%;
+        font-size: 28px;
+        line-height: 1.2;
+        padding: 30px 0px; } }
+    .organisme__row .organisme__desc p {
+      width: 100%;
+      font-size: 18px; }
+    .organisme__row .organisme__desc h4 {
+      font-weight: 500;
+      font-size: 13pt;
+      margin-bottom: 30px;
+      width: 160px; }
+
+.organisme__row:nth-child(4) {
+  color: #8D8F88;
+  margin-top: 30px;
+  padding-bottom: 0;
+  border-bottom: 1px solid #8D8F88; }
+
+.collab {
+  background-color: #8D8F88;
+  width: 100%; }
+
+.collab__liste {
+  width: 720px;
+  margin: 0 20px;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: row;
+  webkit-flex-direction: row;
+  flex-wrap: wrap;
+  webkit-flex-wrap: wrap;
+  justify-content: space-around; }
+  .collab__liste h1 {
+    font-weight: 600;
+    font-size: 18px; }
+  .collab__liste h3 {
+    font-weight: 400;
+    font-size: 16px; }
+  .collab__liste .membre__about {
+    font-weight: 300;
+    color: black;
+    margin-top: 20px; }
+    .collab__liste .membre__about a {
+      font-weight: 300;
+      color: black; }
+
+.collab__membre {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: row;
+  webkit-flex-direction: row;
+  justify-content: space-between;
+  margin-top: 60px;
+  color: #8D8F88;
+  margin: auto; }
+  .collab__membre img {
+    margin-bottom: 20px; }
+  .collab__membre h1 {
+    font-weight: 600;
+    font-size: 18px; }
+  .collab__membre h3 {
+    font-weight: 400;
+    font-size: 16px; }
+  .collab__membre .membre__about {
+    font-weight: 300;
+    color: black;
+    margin-top: 20px; }
+    .collab__membre .membre__about a {
+      font-weight: 300;
+      color: black; }
+
+.projet__head {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  flex-direction: row;
+  width: 100%;
+  height: 595px;
+  margin-top: 60px; }
+  .projet__head .head__date {
+    width: 10%; }
+  .projet__head .head__bg {
+    width: 90%;
+    height: 100%;
+    background-image: url("../images/R001-0032.jpg"); }
+    .projet__head .head__bg .head__title {
+      width: 320px;
+      height: 160px;
+      background-color: #F0AA1F;
+      margin-left: 160px;
+      padding: 30px 15px;
+      color: #fff; }
+      .projet__head .head__bg .head__title h1 {
+        font-weight: 400;
+        font-size: 25px; }
+      .projet__head .head__bg .head__title h3 {
+        font-weight: 200;
+        font-size: 25px; }
+
+.content {
+  width: 700px;
+  margin: auto;
+  margin-top: 80px;
+  font-size: 18px; }
+  .content * {
+    margin-top: 20px; }
+  .content h4 {
+    font-weight: 400;
+    width: 260px; }
+
+.nouvelle__head {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  flex-direction: row;
+  width: 100%;
+  height: 595px;
+  margin-top: 60px; }
+  .nouvelle__head .head__date {
+    width: 10%; }
+  .nouvelle__head .head__bg {
+    width: 90%;
+    height: 100%;
+    background-image: url("../images/R001-0032.jpg"); }
+    .nouvelle__head .head__bg .head__title {
+      width: 320px;
+      height: 160px;
+      background-color: #fff;
+      margin-left: 160px;
+      padding: 30px 15px;
+      color: #8D8F88; }
+      .nouvelle__head .head__bg .head__title h1 {
+        font-weight: 400;
+        font-size: 25px; }
+      .nouvelle__head .head__bg .head__title h3 {
+        font-weight: 200;
+        font-size: 25px; }
+
+.content {
+  width: 700px;
+  margin: auto;
+  margin-top: 80px;
+  font-size: 18px; }
+  .content * {
+    margin-top: 20px; }
+  .content h4 {
+    font-weight: 400;
+    width: 260px; }
+
 /* font-family: 'Source Serif Pro', serif; */
 /* font-family: 'Source Sans Pro', sans-serif;
 */
@@ -394,6 +607,9 @@
   padding: 0;
   list-style: none; }
 
+html {
+  box-sizing: border-box; }
+
 .page-title {
   margin: 80px 0;
   font-weight: 300;
@@ -405,7 +621,7 @@
   background-color: #0F263B; }
 
 .bg--blue {
-  background-image: url("blue-background.svg");
+  background-image: url("../images/blue-background.svg");
   background-repeat: no-repeat; }
 
 .desc--yellow {
@@ -415,7 +631,7 @@
   background-color: #8D8F88; }
 
 .bg--gray {
-  background-image: url("gray-background.svg");
+  background-image: url("../images/gray-background.svg");
   background-repeat: no-repeat;
   background-position-x: -815px;
   background-position-y: -411px;
@@ -425,14 +641,11 @@
   background-color: #2C5234; }
 
 .bg--green {
-  background-image: url("green-background.svg");
+  background-image: url("../images/green-background.svg");
   background-repeat: no-repeat; }
 
 button:focus {
   outline: none; }
-
-html {
-  box-sizing: border-box; }
 
 .lang {
   width: 100%;
@@ -452,6 +665,12 @@ html {
       .lang a {
         margin: 0; } }
 
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%; }
+
 h2,
 h3,
 h4,
@@ -463,6 +682,14 @@ p,
 button {
   font-family: 'Source Sans Pro', sans-serif;
   font-weight: 200; }
+
+body {
+  height: 100%;
+  margin: 0;
+  overflow-x: hidden; }
+
+a {
+  text-decoration: none; }
 
 .services,
 .projets,
@@ -494,14 +721,6 @@ button {
       width: 1020px;
       margin: auto; } }
 
-body {
-  height: 100%;
-  margin: 0;
-  overflow-x: hidden; }
-
-a {
-  text-decoration: none; }
-
 .home {
   display: -webkit-box;
   display: -moz-box;
@@ -509,8 +728,7 @@ a {
   display: -webkit-flex;
   display: flex;
   flex-direction: column;
-  webkit-flex-direction: column;
-  margin-bottom: 200px; }
+  webkit-flex-direction: column; }
 
 .home__news {
   display: -webkit-box;
@@ -570,12 +788,15 @@ a {
   webkit-flex-direction: row;
   justify-content: space-between;
   margin: auto;
+  margin-top: 200px;
+  margin-bottom: 30px;
   position: relative;
   bottom: 0;
-  padding-top: 10px;
+  padding-top: 25px;
   font-family: 'Source Sans Pro', sans-serif;
   color: #1D1D1B;
-  width: 100%; }
+  width: 100%;
+  border-top: 1px solid black; }
   @media screen and (min-width: 401px) {
     .footer {
       width: 1020px; } }
@@ -617,23 +838,7 @@ a {
     display: flex;
     flex-direction: column; }
 
-.social {
-  display: flex;
-  flex-direction: row; }
-
-.temp-logo {
-  height: 10px;
-  width: 10px;
-  margin: 3px;
-  background-color: #111; }
-
 /* ++++++++++++++++ */
-html,
-body {
-  margin: 0;
-  padding: 0;
-  width: 100%; }
-
 .head {
   display: -webkit-box;
   display: -moz-box;
@@ -645,7 +850,7 @@ body {
   justify-content: space-between;
   width: 100%;
   height: 60vh;
-  background-image: url("blue-background.svg");
+  background-image: url("../images/blue-background.svg");
   background-color: #0F263B; }
   @media screen and (min-width: 401px) {
     .head {
