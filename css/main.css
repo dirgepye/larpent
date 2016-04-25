@@ -147,6 +147,10 @@
 /* font-family: 'Source Serif Pro', serif; */
 /* font-family: 'Source Sans Pro', sans-serif;
 */
+@media screen and (min-width: 750px) {
+  .body {
+    margin: 0 15px; } }
+
 .services__row {
   display: -webkit-box;
   display: -moz-box;

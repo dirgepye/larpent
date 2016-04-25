@@ -31,7 +31,11 @@ $text-gray: #8D8F88;
 //     flex-direction: column;
 // }
 
-
+.body {
+        @media screen and (min-width: 750px) {
+        margin: 0 15px;
+    }
+}
 .services__row {
     @include flex;
     flex-direction: column;
@@ -51,6 +55,8 @@ $text-gray: #8D8F88;
     width: 1020px;
     height: 300px;
     }
+    
+
     
     h2 {
         height: 170px;
