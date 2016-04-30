@@ -32,9 +32,7 @@ $text-gray: #8D8F88;
 // }
 
 .body {
-        @media screen and (min-width: 750px) {
-        margin: 0 15px;
-    }
+        
 }
 .services__row {
     @include flex;
@@ -47,8 +45,11 @@ $text-gray: #8D8F88;
     background-position-x: -550px;
     background-position-y: -310px;
     
+    @media screen and (min-width: 751px) {
+        width: 730px;
+    }
     
-    @media screen and (min-width: 401px) {
+    @media screen and (min-width: 416px) {
     @include flex;
     flex-direction: row;
     justify-content: space-between;
